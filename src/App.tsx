@@ -3,7 +3,7 @@ import "./App.css";
 import io from "socket.io-client";
 import RPlaceClone from "./Place";
 
-const socket = io("http://localhost:3000");
+const socket = io(import.meta.env.VITE_API_URL);
 
 function App() {
   const [messages, setMessages] = useState<
